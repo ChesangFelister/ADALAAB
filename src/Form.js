@@ -21,55 +21,35 @@ export default class Form extends React.Component {
   };
 
 
-
-//   onSubmit = e => {
-//     e.preventDefault();
-// // this.props.onSubmit(this.state);
-//     this.setState({
-//       firstName: "",
-//       lastName: "",
-//       username: "",
-//       email: "",
-//       password: ""
-//     });
-//     this.props.onChange({
-//       firstName: "",
-//       lastName: "",
-//       username: "",
-//       email: "",
-//       password: ""
-//     });
-//   };
-
   render() {
     return (
-      <form className="form-inputs">
+      <form autocomplete="off" className="form-inputs">
         <input className="input-area"
           name="firstName"
           placeholder="First name"
           value={this.state.firstName}
-          onChange={e => this.change(e)}
+       
         />
         <br />
         <input className="input-area"
           name="lastName"
           placeholder="Last name"
           value={this.state.lastName}
-          onChange={e => this.change(e)}
+         
         />
         <br />
         <input className="input-area"
           name="username"
           placeholder="Username"
           value={this.state.username}
-          onChange={e => this.change(e)}
+         
         />
         <br />
         <input className="input-area"
           name="email"
           placeholder="Email"
           value={this.state.email}
-          onChange={e => this.change(e)}
+         
         />
         <br />
         <input className="input-area"
@@ -77,10 +57,11 @@ export default class Form extends React.Component {
           type="password"
           placeholder="Password"
           value={this.state.password}
-          onChange={e => this.change(e)}
+          
         />
         <br />
-        <button className="submit-btn" onClick={e => this.onSubmit(e)}>Submit</button>
+        <button className="submit-btn" onClick={e => this.onSubmit(e)}>Register</button>
+      
       </form>
     );
     }}

@@ -1,6 +1,6 @@
 import React from "react";
 
-export default class Form extends React.Component {
+export default class Login extends React.Component {
 
   state = {
     
@@ -15,13 +15,14 @@ export default class Form extends React.Component {
 
   render() {
     return (
-      <form className="form-inputs">
+      <form autocomplete="off" className="form-inputs">
         
         <input className="input-area"
           name="username"
           placeholder="Username"
           value={this.state.username}
           onChange={e => this.change(e)}
+    
         />
           <br />
         
@@ -30,7 +31,8 @@ export default class Form extends React.Component {
           type="password"
           placeholder="Password"
           value={this.state.password}
-          onChange={e => this.change(e)}
+          
+          
         />
         <br />
         <button className="submit-btn" onClick={e => this.onSubmit(e)}>Login</button>
